@@ -1,5 +1,7 @@
 """David Evra - Homework 1, Problem 1: Quadratic Equations."""
 
+from math import pow
+
 
 def get_variable(v: str) -> float | None:
     vStr = input(f"Enter {v}: ")
