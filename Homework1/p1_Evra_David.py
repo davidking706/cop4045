@@ -1,6 +1,7 @@
 """David Evra - Homework 1, Problem 1: Quadratic Equations."""
 
 from math import pow, sqrt
+import matplotlib.pyplot as plt
 
 
 def get_variable(v: str) -> float | None:
@@ -29,6 +30,26 @@ def quadratic_formula(a: float, b: float, d: float) -> tuple[float, float]:
 
     return tuple(sorted((x_1, x_2)))
 
+def plot_quadratic(a: float, b: float, c: float, d: float):
+    if d < 0:
+        x_center = -b / (2 * a)
+
+        x_min = x_center - 2
+        x_max = x_center + 2
+    else:
+        x_1, x_2 = quadratic_formula(a, b, d)
+
+        x_min = x_1 - 2
+        x_max = x_2 + 2
+
+    step = (x_max - x_min) / 149
+
+    xs = [x_min + i * step for i in range(150)]
+    ys = [a*pow(x, 2) + b*x + c for x in xs]
+
+    plt.plot(xs, ys)
+    plt.show()
+
 def main():
     while True:
         a = get_variable('a')
@@ -40,7 +61,7 @@ def main():
         d = discriminant(a, b, c)
 
         show_solution(a, b, d)
-
+        plot_quadratic(a, b, c, d)
 
 
 if __name__ == "__main__":
