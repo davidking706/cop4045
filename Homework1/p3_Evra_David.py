@@ -12,11 +12,22 @@ def find_dup_str(s, n):
             
     return ""
 
+def find_max_dup(s):
+    for i in range(len(s) // 2, 0, -1):
+        dup = find_dup_str(s, i)
+
+        if dup != "":
+            return dup
+
+    return ""
+
 def main():
     s = input("Enter string: ")
     n = int(input("Enter substring length: "))
 
     print(find_dup_str(s, n))
+    print()
+    print(find_max_dup(s))
 
 if __name__ == "__main__":
     main()
