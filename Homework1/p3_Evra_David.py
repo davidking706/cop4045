@@ -22,12 +22,14 @@ def find_max_dup(s):
     return ""
 
 def main():
-    s = input("Enter string: ")
+    s1 = input("Enter string: ")
     n = int(input("Enter substring length: "))
 
-    print(find_dup_str(s, n))
+    print(find_dup_str(s1, n))
     print()
-    print(find_max_dup(s))
+    s2 = input("Enter string for longest duplicate: ")
+
+    print(find_max_dup(s2))
 
 if __name__ == "__main__":
     main()
