@@ -6,7 +6,7 @@ import math
 
 def plot_function(fun_str, domain, ns):
     x_min, x_max = domain
-    step = (x_max - x_min) / ns
+    step = (x_max - x_min) / (ns - 1)
 
     xs = [x_min + i * step for i in range(ns)]
     ys = [eval(fun_str) for x in xs]
