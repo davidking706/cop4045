@@ -15,7 +15,8 @@ def find_Pythagorean(n: int) -> list[tuple]:
     return possible_pythagoreans
 
 def main():
-    print(find_Pythagorean(5))
+    n = int(input("Enter a positive integer limit: "))
+    print(find_Pythagorean(n))
 
 if __name__ == "__main__":
     main()
