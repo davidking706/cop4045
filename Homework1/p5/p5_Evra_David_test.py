@@ -2,7 +2,7 @@
 
 import unittest
 
-from Homework1.Homework1.p5.p5_Evra_David import caesar_cipher, caesar_decipher, letter_frequency
+from p5_Evra_David import caesar_cipher, caesar_decipher, letter_frequency
 
 
 class TestCaesarCipher(unittest.TestCase):
